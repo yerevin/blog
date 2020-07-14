@@ -6,9 +6,10 @@ title: 🚀Angular🚀 - @ngneat/transloco - multiple scopes merged and lazy loa
 
 Requirements: project with default @ngneat/transloco configuration
 
-If you use [@ngneat/transloco](https://github.com/ngneat/transloco) and were wondering how to lazy load multiple scopes inside module there is a solution for you.
+If you use [@ngneat/transloco](https://github.com/ngneat/transloco) and were wondering how to lazy load multiple scopes inside module there is a solution for you.  
+  
 So you have your project configured already with @ngneat/transloco and you want to simply load multiple translations lazy loaded in the scope of choosen module.
-
+  
 There are steps that you need to follow to make it work - let's go.
 
 1) Redefine default TransolocoLoader getTranslation function [Transloco Loader](https://github.com/yerevin/hire-me-recruitation-repo/blob/master/angular-rxjs/src/app/transloco.loader.ts)
@@ -47,9 +48,9 @@ providers: [{ provide: TRANSLOCO_SCOPE, useValue: ['core', 'auth'] }]
 ```
 
 4) Finally - you can use your multiple translations inside html templates [Template](https://github.com/yerevin/hire-me-recruitation-repo/blob/master/angular-rxjs/src/app/modules/auth/components/login/login.component.html)
-```angular
-  {{ "auth.email" | transloco }}
-  {{ "core.add" | transloco }}
+```html
+  <label>{{{{ "auth.email" | transloco }}}}</label>
+  <button>{{{{ "core.add" | transloco }}}}</button>
 ```
 
 
