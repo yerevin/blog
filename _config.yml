@@ -8,7 +8,8 @@ author:
 
 # Build settings
 baseurl: /blog/
-markdown: kramdown
+# markdown: kramdown
+markdown: redcarpet
 source: .
 destination: ./_site
 permalink: /:title
