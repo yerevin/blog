@@ -2,7 +2,7 @@
 title: 🚀Angular🚀 - @ngneat/transloco - multiple scopes merged and lazy loaded
 ---
 
-[Github markdown version](https://github.com/yerevin/blog/blob/gh-pages/_posts/2020-07-08-angular-transloco-multiple-scopes-merged-and-lazy-loaded.md)
+[Github markdown version - can be easier to read](https://github.com/yerevin/blog/blob/gh-pages/_posts/2020-07-08-angular-transloco-multiple-scopes-merged-and-lazy-loaded.md)
 
 Requirements: project with default @ngneat/transloco configuration
 
