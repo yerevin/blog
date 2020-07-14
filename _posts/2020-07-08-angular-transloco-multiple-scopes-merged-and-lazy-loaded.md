@@ -13,7 +13,7 @@ So you have your project configured already with @ngneat/transloco and you want 
 There are steps that you need to follow to make it work - let's go.
 
 1) Redefine default TransolocoLoader getTranslation function [Transloco Loader](https://github.com/yerevin/hire-me-recruitation-repo/blob/master/angular-rxjs/src/app/transloco.loader.ts)
-```typescript
+~~~typescript
   getTranslation(langPath: string) {
     let [multiplePaths, activeLang] = langPath.split('/');
     let splittedMultiplePaths = multiplePaths.split(',');
@@ -31,21 +31,21 @@ There are steps that you need to follow to make it work - let's go.
       })
     );
   }
-```
+~~~
 
 2) [Example of translation files](https://github.com/yerevin/hire-me-recruitation-repo/tree/master/angular-rxjs/src/assets/i18n/auth) - you need to wrap every file with unique module prefix (eg. "auth" like below)
-```json
+~~~json
 {
   "auth": {
     "email": "Email",
   }
 }
-```
+~~~
 
 3) In module inside what you want to use your multiple translations define provider option with useValue containing array of translations that you want to load [Module](https://github.com/yerevin/hire-me-recruitation-repo/blob/master/angular-rxjs/src/app/modules/auth/module.ts)
-```angular
+~~~angular
 providers: [{ provide: TRANSLOCO_SCOPE, useValue: ['core', 'auth'] }]
-```
+~~~
 
 4) Finally - you can use your multiple translations inside html templates [Template](https://github.com/yerevin/hire-me-recruitation-repo/blob/master/angular-rxjs/src/app/modules/auth/components/login/login.component.html)
 
