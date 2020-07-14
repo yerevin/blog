@@ -8,8 +8,10 @@ author:
 
 # Build settings
 baseurl: /blog/
-# markdown: kramdown
-markdown: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 source: .
 destination: ./_site
 permalink: /:title
