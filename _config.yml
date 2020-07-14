@@ -9,7 +9,7 @@ author:
 # Build settings
 baseurl: /blog/
 # markdown: kramdown
-markdown: redcarpet
+markdown: GFM
 source: .
 destination: ./_site
 permalink: /:title
