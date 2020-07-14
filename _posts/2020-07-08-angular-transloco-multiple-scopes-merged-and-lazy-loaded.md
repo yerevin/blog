@@ -47,9 +47,10 @@ providers: [{ provide: TRANSLOCO_SCOPE, useValue: ['core', 'auth'] }]
 ```
 
 4) Finally - you can use your multiple translations inside html templates [Template](https://github.com/yerevin/hire-me-recruitation-repo/blob/master/angular-rxjs/src/app/modules/auth/components/login/login.component.html)
-```html
+{% highlight html linenos %}
   <label for="email">{{ "auth.email" | transloco }}</label>
   <button>{{ "core.add" | transloco }}</button>
-```
+{% endhighlight %}
+
 
 Happy coding! 🚀
