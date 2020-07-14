@@ -8,10 +8,7 @@ author:
 
 # Build settings
 baseurl: /blog/
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
+markdown: CommonMarkGhPages
 source: .
 destination: ./_site
 permalink: /:title
