@@ -8,7 +8,7 @@ author:
 
 # Build settings
 baseurl: /blog/
-markdown: GFM
+markdown: kramdown
 source: .
 destination: ./_site
 permalink: /:title
