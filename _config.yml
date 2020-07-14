@@ -8,7 +8,7 @@ author:
 
 # Build settings
 baseurl: /blog/
-markdown: CommonMarkGhPages
+markdown: GFM
 source: .
 destination: ./_site
 permalink: /:title
