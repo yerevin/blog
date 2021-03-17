@@ -5,7 +5,7 @@ title: 🚀React Native🚀 - react-navigation - force drawer item route navigat
 [Github markdown version - can be easier to read](https://github.com/yerevin/blog/blob/gh-pages/_posts/2021-03-13-react-navigation-force-drawer-item-route-navigation.md)
 
 The main point is to overwrite navigation property passed to DrawerItemList
-```
+
   navigation={{
     dispatch: (event: any) => {
       const routeName = event?.payload?.name;
@@ -19,7 +19,6 @@ The main point is to overwrite navigation property passed to DrawerItemList
       return props.navigation.closeDrawer();
     }
   }}
-```
 
 Below is for example whole one file you can hold it
 
