@@ -21,7 +21,7 @@ The main point is to overwrite navigation property passed to DrawerItemList
   }
 ```
 
-Below is for example whole one file you can hold it
+Below is complete example
 
 ```typescript
 const FirstScreen = () => <View />;
