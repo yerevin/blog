@@ -6,6 +6,7 @@ title: 🚀React Native🚀 - react-navigation - force drawer item route navigat
 
 The main point is to overwrite navigation property passed to DrawerItemList
 
+```typescript
   navigation={{
     dispatch: (event: any) => {
       const routeName = event?.payload?.name;
@@ -13,12 +14,12 @@ The main point is to overwrite navigation property passed to DrawerItemList
         return props.navigation.reset({
           index: 0,
           routes: [{ name: routeName }]
-       });
+        });
       }
-
       return props.navigation.closeDrawer();
     }
   }}
+```
 
 Below is for example whole one file you can hold it
 
