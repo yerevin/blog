@@ -21,7 +21,7 @@ And then in your tests you have case when you check if method to upload file is 
 
     // generate file for userEvent.upload method
     canvas.toBlob(async (blob) => {
-      const file = new File([blob], "instruction_image.png", {
+      const file = new File([blob], "image.png", {
         type: "image/png"
       });
 
