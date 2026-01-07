@@ -10,25 +10,22 @@ And then in your tests you have case when you check if method to upload file is 
 
 ```typescript
   test("should call method to upload file on button click", async () => {
-    // spy on some method eg. "uploadPhoto"
-
-    const fileInput = (await screen.findByTitle(/upload image/i));
-
-    // define canvas to set required image resolution to pass test
+    const uploadPhoto = jest.fn(); // Assuming this is your spy
+    const fileInput = await screen.findByTitle(/upload image/i);
+  
     const canvas = document.createElement("canvas");
     canvas.width = 600;
     canvas.height = 400;
-
-    // generate file for userEvent.upload method
-    canvas.toBlob(async (blob) => {
-      const file = new File([blob], "image.png", {
-        type: "image/png"
-      });
-
-      userEvent.upload(fileInput, file);
-
-      // test should pass and you should get uploadPhoto method called
-      expect(uploadPhoto).toHaveBeenCalledTimes(1);
-    });
+  
+    // 1. Wrap toBlob in a Promise to make it "awaitable"
+    const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+    
+    const file = new File([blob], "image.png", { type: "image/png" });
+  
+    // 2. await the upload event (crucial for user-event v14+)
+    await userEvent.upload(fileInput, file);
+  
+    // 3. Now the assertion will run at the correct time
+    expect(uploadPhoto).toHaveBeenCalledTimes(1);
   });
 ```
